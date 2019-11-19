@@ -137,6 +137,7 @@ public class OngoingCallActivity extends AbsThemeActivity implements DialpadFrag
     @BindView(R.id.button_speaker) ImageView mSpeakerButton;
     @BindView(R.id.button_add_call) ImageView mAddCallButton;
     @BindView(R.id.button_send_sms) Button mSendSmsButton;
+    @BindView(R.id.button_video_call) ImageView mVideoCallButton;
 
     // Floating Action Buttons
     @BindView(R.id.button_floating_reject_call_timer)
@@ -429,6 +430,11 @@ public class OngoingCallActivity extends AbsThemeActivity implements DialpadFrag
 //        CallManager.addCall(// a call);
     }
 
+    @OnClick(R.id.button_video_call)
+    public void startVideoCall(View view) {
+        //initiate video call
+    }
+
     /**
      * Cancel the call timer
      *
@@ -603,6 +609,7 @@ public class OngoingCallActivity extends AbsThemeActivity implements DialpadFrag
         mKeypadButton.setVisibility(View.VISIBLE);
         mSpeakerButton.setVisibility(View.VISIBLE);
         mAddCallButton.setVisibility(View.VISIBLE);
+        mVideoCallButton.setVisibility(View.VISIBLE);
         moveRejectButtonToMiddle();
     }
 
